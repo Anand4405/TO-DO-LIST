@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+    <script src="https://kit.fontawesome.com/35041f14d4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/CSS/stylesheet.css">
+</head>
+<body>
+    <h1 id="titl">TO DO LIST</h1>
+
+    
+
+  <div class="c-form" >
+      <form action="/add-task" method="post">
+        <label for="tas" class="descri">Description</label>
+        <br>
+        <!-- <input type="text" name="name" id="task" placeholder="Enter your task" required> -->
+        <textarea name="task" id="tas" cols="60" rows="5" placeholder="Enter your task" required></textarea>
+        <br>
+        
+        
+        <br>
+        <label for="drop-down">Select Category</label>
+        <label for="date" class="dat">Due Date</label>
+        
+        <br>
+        <input type="text" list="drop-down" placeholder="Select a category" name="category" class="select-cate">
+        <datalist  id="drop-down" >
+            <option > <strong>Personal </strong></option>
+            <option > <strong>Education </strong></option>
+            <option > <strong>Office</strong> </option>
+            <option > <strong>Sports</strong></option>
+            <option > <strong> Family </strong></option>
+            
+        </datalist>
+        <input type="date" id="date" name = "date" required>
+        <br><br>
+
+        <button type="submit" id="task-button"> Add Task</button>
+       
+
+    </form> </div>
+    <div class="show">
+    <%for (let i of task_list) { %>
+        <ul class="tsk">
+        <li >
+            <!-- <input type="checkbox" id = "i._id" name="checkbox"> -->
+            <div class="details">
+                <div class="delete-button">
+                    <a href="/delete-task/?id=<%= i._id %>">
+                        <i class="fas fa-window-close"></i>
+                        <!-- <i class="fa-solid fa-trash"></i> -->
+                    </a>
+                </div>
+            <span id="c-name"><%= i.task%></span>
+           <div class="btn"> <button >  <span><%= i.category%></span> </button> </div>
+            <br>
+            <span> <i class="fa-solid fa-calendar-day"></i></i><%= i.date.toLocaleDateString() %></span>
+            <!-- <p>
+                <script> document.write(<%= i.date%>.toLocaleDateString()); </script>
+                </p> -->
+        </div>
+    </li> </ul>
+
+    <%}%>
+</div>
+    <script type="text/javascript" src="/JS/home.js"></script>
+</body>
+</html>

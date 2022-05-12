@@ -1,0 +1,78 @@
+body{
+    margin-left: -10px;        /* Entire moved to left by 10px*/
+    padding: 0;                        
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    background: rgb(89, 245, 250);
+}
+#titl{               /* margin set for title*/
+    margin-left: 45%;
+    
+}
+
+.c-form{
+    
+    padding: 20px;
+    margin-left:37%;
+    
+}
+
+
+.dat{
+    padding-left: 180px;
+}
+
+#date{
+    
+    margin-left: 120px;    /* date taking fixed */
+    /* background-color:fuchsia; */
+    border-radius: 5px;
+    height:25px;
+}
+.select-cate{   /* border radius applied for category selection */
+    border-radius: 5px;
+}
+#drop-down{
+    background-color: fuchsia;
+    border-radius: 5px;
+    height:25px;
+}
+
+.tsk{
+
+    list-style: none;
+    margin-left:30%;
+}
+#task-button{              /* Add Task button fixed here*/
+    color: peachpuff;
+    margin-left: 180px;
+    height: 40px;
+    width:80px;
+    border-radius: 5px;
+    background-color: rgb(14, 15, 14);
+    
+}
+.btn{               /* which category we selected that button setting here*/
+    display: inline-block;
+    position: relative;
+    margin-left:20%;
+    
+}
+
+.btn button{
+    background-color: peru;
+    border-radius: 5%;
+}
+
+.show{
+    
+    margin-left: 120px;
+}
+
+
+
+.delete-button{
+    display: inline-block;
+   
+}
+
